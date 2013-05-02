@@ -7,7 +7,8 @@
  * Useful, when loading content/JSON payloads from another domain, 
  * i.e., 3rd-party Solr indexes, copy-and-pasting content from another environment, etc
  * 
- * @author Rafael Gonzaque <@iamrgon | rafaelgonzaque@gmail.com>
+ * (c) 2013 Rafael Gonzaque <@iamrgon | rafaelgonzaque@gmail.com> 
+ * Freely distributed under the MIT License.
  */
 (function(w, d, $){
   var Originize = (function (w, d, $) {
