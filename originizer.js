@@ -12,6 +12,7 @@
  */
 (function(w, d, $){
   var Originize = (function (w, d, $) {
+  		// include jQuery if it's not already included
 		if (!$) {
 			var fjs = d.getElementsByTagName('script')[0],
 				js = d.createElement('script');
@@ -23,6 +24,7 @@
 			$ = jQuery.noConflict();
 		}
 
+		// init these vars
 		var currentOrigin = [w.location.protocol, '//', w.location.host, '/'].join(''),
 			regExp = /^http(s)?\:\/\/.*(\.com)?(\:(\d)+)?\//;
 
@@ -34,6 +36,7 @@
 			if (matches && matches.length) {
 				var url = matches.shift();
 
+				// if host is not equal, replace witb current host
 				if (url !== currentOrigin) {
 					$el.attr('href', href.replace(url, currentOrigin));
 				}
@@ -41,5 +44,6 @@
 		});
 	}).bind(this, w, d, $);
 
+	// export fn to global scope
 	w.Originize = Originize;
 })(window, document, jQuery || undefined);
