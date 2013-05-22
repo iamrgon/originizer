@@ -41,5 +41,5 @@
 		});
 	}).bind(this, w, d, $);
 
-	window.Originize = Originize;
+	w.Originize = Originize;
 })(window, document, jQuery || undefined);
